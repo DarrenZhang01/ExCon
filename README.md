@@ -4,6 +4,7 @@
 - Zhibo Zhang (zhibozhang@cs.toronto.edu)
 - Jongseong Jang (j.jang@lgresearch.ai)
 - Ruiwen Li (ruiwen.li@mail.utoronto.ca)
+
 Copyright (c) 2021, all rights reserved.
 
 ### Run ExCon:
