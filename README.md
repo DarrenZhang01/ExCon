@@ -12,7 +12,7 @@ python3 ExCon/main_supcon.py --epochs=200 --explainer="GradCAM" --dataset="cifar
 ```
 
 If you use our code, please cite our paper:
-
+```
 @misc{zhang2021excon,
       title={ExCon: Explanation-driven Supervised Contrastive Learning for Image Classification},
       author={Zhibo Zhang and Jongseong Jang and Chiheb Trabelsi and Ruiwen Li and Scott Sanner and Yeonjeong Jeong and Dongsub Shim},
@@ -21,7 +21,7 @@ If you use our code, please cite our paper:
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-
+```
 ## Reference Repos:
 
 [1] https://github.com/HobbitLong/SupContrast
