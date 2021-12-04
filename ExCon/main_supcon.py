@@ -54,6 +54,8 @@ def parse_option():
     parser.add_argument('--seed', type=int, default=1, help='seed of the run')
     parser.add_argument('--val_ratio', type=float, default=0.2,
                         help='the ratio of the validation set')
+    parser.add_argument('--threshold', type=float, default=0.15,
+                        help='the threshold for masking for drop and increase score')
 
     # optimization
     parser.add_argument('--learning_rate', type=float, default=0.05,
@@ -634,18 +636,15 @@ def main():
         opt.save_folder, 'last.pth')
     save_model(encoder, e_optimizer, classifier, c_optimizer, opt, opt.epochs, save_file)
 
-    ### load best model###
-    best_model_path = os.path.join(opt.save_folder, 'ckpt_best_val_acc_{}.pth'.format(best_acc))
-    print("load best model_{}".format(best_model_path))
-    best_model = torch.load(best_model_path)
-    encoder.load_state_dict(best_model['encoder'])
-    classifier.load_state_dict(best_model['classifier'])
-    opt = best_model['opt']
+    # ### load best model###
+    # best_model_path = os.path.join(opt.save_folder, 'ckpt_best_val_acc_{}.pth'.format(best_acc))
+    # print("load best model_{}".format(best_model_path))
+    # best_model = torch.load(best_model_path)
+    # encoder.load_state_dict(best_model['encoder'])
+    # classifier.load_state_dict(best_model['classifier'])
+    # opt = best_model['opt']
 
     eval_drop_increase(encoder, classifier, opt, val_loader_classifier, explainer1)
-
-    if 'ImageNet' in opt.dataset:
-        eval_ebpg_miou_bbox(val_loader_classifier, explainer1)
 
     print('best accuracy: {:.2f}'.format(best_acc))
 
