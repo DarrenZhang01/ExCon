@@ -9,11 +9,6 @@
 
 Copyright (c) 2021 LG AI Research and University of Toronto, all rights reserved.
 
-### Run ExCon:
-```python
-python3 ExCon/main_supcon.py --epochs=200 --explainer="GradCAM" --dataset="cifar100" --batch_size=256 --method="Ex_SupCon" --learning_rate=0.5 --temp=0.1 --cosine --negative_pair=1 --validation=1 --background_anchor=0 --exp_epochs=0
-```
-
 If you use our code, please cite our paper:
 ```
 @misc{zhang2021excon,
@@ -25,6 +20,20 @@ If you use our code, please cite our paper:
       primaryClass={cs.CV}
 }
 ```
+
+Prepare the Tiny ImageNet dataset (in the path where you want to save the dataset):
+```
+wget -nc https://image-net.org/data/tiny-imagenet-200.zip
+unzip tiny-imagenet-200.zip
+python3 ExCon/utils/val_format.py
+```
+
+### Run ExCon:
+```python
+python3 ExCon/main_supcon.py --epochs=200 --explainer="GradCAM" --dataset="cifar100" --batch_size=256 --method="Ex_SupCon" --learning_rate=0.5 --temp=0.1 --cosine --negative_pair=1 --validation=1 --background_anchor=0 --exp_epochs=0
+```
+
+
 ## Reference Repos:
 
 [1] https://github.com/HobbitLong/SupContrast
