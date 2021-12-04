@@ -1,11 +1,13 @@
 # ExCon: Explanation-driven Supervised Contrastive Learning
 
+### Link to the paper: https://arxiv.org/pdf/2111.14271.pdf
+
 ### Contributors of this repo:
 - Zhibo Zhang (zhibozhang@cs.toronto.edu)
 - Jongseong Jang (j.jang@lgresearch.ai)
 - Ruiwen Li (ruiwen.li@mail.utoronto.ca)
 
-Copyright (c) 2021, all rights reserved.
+Copyright (c) 2021 LG AI Research and University of Toronto, all rights reserved.
 
 ### Run ExCon:
 ```python
