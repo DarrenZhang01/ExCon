@@ -127,6 +127,9 @@ def parse_option():
     if opt.negative_pair == 0:
         opt.background_anchor = 1
 
+    if opt.dataset == "ImageNet":
+        opt.size = 64
+
     # check if dataset is path that passed required arguments
     if opt.dataset == 'path':
         assert opt.data_folder is not None \
