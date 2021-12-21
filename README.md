@@ -7,7 +7,7 @@
 - Jongseong Jang (j.jang@lgresearch.ai)
 - Ruiwen Li (ruiwen.li@mail.utoronto.ca)
 
-Copyright (c) 2021 LG AI Research and University of Toronto, all rights reserved.
+Copyright (c) 2021 **LG AI Research** and **University of Toronto**, all rights reserved.
 
 If you use our code, please cite our paper:
 ```
